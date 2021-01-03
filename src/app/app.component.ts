@@ -4,35 +4,14 @@ import { Component } from "@angular/core";
   selector: "app-root",
   template: `
     <!--The content below is only a placeholder and can be replaced.-->
+    <app-navbar></app-navbar>
     <div style="text-align:center" class="content">
-      <h1>{{ title }} wita na Twojej grządce!</h1>
       <img width="300" alt="Zdalny Ogrodek Logo" src="/assets/logo.png" />
     </div>
-    <h2>Here are some links to help you start:</h2>
-    <ul>
-      <li>
-        <h2>
-          <a target="_blank" rel="noopener" href="https://angular.io/tutorial"
-            >Tour of Heroes</a
-          >
-        </h2>
-      </li>
-      <li>
-        <h2>
-          <a target="_blank" rel="noopener" href="https://angular.io/cli"
-            >CLI Documentation</a
-          >
-        </h2>
-      </li>
-      <li>
-        <h2>
-          <a target="_blank" rel="noopener" href="https://blog.angular.io/"
-            >Angular blog</a
-          >
-        </h2>
-      </li>
-    </ul>
-    <router-outlet></router-outlet>
+
+    <div class="flex-grow-1">
+      <router-outlet></router-outlet>
+    </div>
   `,
   styles: [],
 })
