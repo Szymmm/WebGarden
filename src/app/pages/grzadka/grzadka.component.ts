@@ -8,6 +8,8 @@ import { Component, OnInit } from "@angular/core";
 export class GrzadkaComponent implements OnInit {
   ngOnInit(): void {}
 
+  selected = null;
+
   field = {
     name: "Pusta nazwa",
     plant: "",

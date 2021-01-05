@@ -6,6 +6,11 @@
   text-align: center;
 }
 
+.grid-active {
+  background-color: red;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+}
+
 .container {
   max-width: 400px;
   align-content: center;

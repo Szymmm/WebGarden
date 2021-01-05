@@ -12,15 +12,18 @@
       <div class="card">
         <div class="card-block">
           <h4 class="card-title">Wizualizacja</h4>
-          <div class="grid-item">
+          <div
+            class="grid-item"
+            [class.grid-active]="selected == field"
+            (click)="selected = field"
+          >
             <label>{{ field.name }}</label>
-            <label>{{ field.plant }}</label>
             <img
               class="grid-img"
               [src]="'../../../assets/' + field.plant + '.jpg'"
             />
           </div>
-          <div class="grid-item">
+          <div class="grid-item" (click)="selected = null">
             <img class="grid-img" src="../../../assets/empty.png" />
           </div>
           <div class="grid-item">
