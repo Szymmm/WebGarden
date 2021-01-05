@@ -5,12 +5,21 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
-import { GrzadkaComponent } from './pages/grzadka/grzadka.component';
-import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { CameraComponent } from './pages/camera/camera.component';
+import { GrzadkaComponent } from "./pages/grzadka/grzadka.component";
+import { PageNotFoundComponent } from "./pages/page-not-found/page-not-found.component";
+import { CameraComponent } from "./pages/camera/camera.component";
+import { EditBarComponent } from "./components/edit-bar/edit-bar.component";
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NavbarComponent, GrzadkaComponent, PageNotFoundComponent, CameraComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    GrzadkaComponent,
+    PageNotFoundComponent,
+    CameraComponent,
+    EditBarComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

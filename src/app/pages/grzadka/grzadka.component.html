@@ -1,13 +1,24 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
+  <div class="row mt-1">
+    <div class="col-xs">
       <br />
-      <div>Podgląd Twojej grządki</div>
+      <h1>Podgląd Twojej grządki</h1>
       <br />
-      <div class="container">
-        <div class="row row-cols-2">
+    </div>
+  </div>
+
+  <div class="row row-cols-2">
+    <div class="col-xs">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title">Wizualizacja</h4>
           <div class="grid-item">
-            <img class="grid-img" src="../../../assets/strawberry.jpg" />
+            <label>{{ field.name }}</label>
+            <label>{{ field.plant }}</label>
+            <img
+              class="grid-img"
+              [src]="'../../../assets/' + field.plant + '.jpg'"
+            />
           </div>
           <div class="grid-item">
             <img class="grid-img" src="../../../assets/empty.png" />
@@ -19,6 +30,37 @@
             <img class="grid-img" src="../../../assets/empty.png" />
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="card-block">
+      <div class="form-group">
+        <label>Name:</label>
+        <input
+          type="text"
+          [value]="field.name"
+          (keyup)="field.name = $event.target.value"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="disabledSelect" class="form-label">Rodzaj uprawy</label>
+        <select
+          id="disabledSelect"
+          class="form-select"
+          [value]="field.plant"
+          (change)="field.plant = $event.target.value"
+        >
+          <option>empty</option>
+          <option>rukola</option>
+          <option>sałata</option>
+          <option>truskawki</option>
+        </select>
+      </div>
+      <div>
+        <button class="btn btn-success float-xs-right" (click)="save($event)">
+          Zapisz
+        </button>
       </div>
     </div>
   </div>

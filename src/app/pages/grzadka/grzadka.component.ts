@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-grzadka',
-  templateUrl: './grzadka.component.html',
-  styleUrls: ['./grzadka.component.scss']
+  selector: "app-grzadka",
+  templateUrl: "./grzadka.component.html",
+  styleUrls: ["./grzadka.component.scss"],
 })
 export class GrzadkaComponent implements OnInit {
+  ngOnInit(): void {}
 
-  constructor() { }
+  field = {
+    name: "Pusta nazwa",
+    plant: "",
+  };
 
-  ngOnInit(): void {
+  save(event) {
+    console.log("Saved", event);
   }
-
+  constructor() {}
 }
