@@ -38,20 +38,14 @@
     <div class="card-block">
       <div class="form-group">
         <label>Name:</label>
-        <input
-          type="text"
-          [value]="field.name"
-          (keyup)="field.name = $event.target.value"
-          class="form-control"
-        />
+        <input type="text" [(ngModel)]="field.name" class="form-control" />
       </div>
       <div class="form-group">
         <label for="disabledSelect" class="form-label">Rodzaj uprawy</label>
         <select
           id="disabledSelect"
           class="form-select"
-          [value]="field.plant"
-          (change)="field.plant = $event.target.value"
+          [(ngModel)]="field.plant"
         >
           <option>empty</option>
           <option>rukola</option>

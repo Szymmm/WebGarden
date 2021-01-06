@@ -9,6 +9,7 @@ import { GrzadkaComponent } from "./pages/grzadka/grzadka.component";
 import { PageNotFoundComponent } from "./pages/page-not-found/page-not-found.component";
 import { CameraComponent } from "./pages/camera/camera.component";
 import { EditBarComponent } from "./components/edit-bar/edit-bar.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { EditBarComponent } from "./components/edit-bar/edit-bar.component";
     CameraComponent,
     EditBarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
