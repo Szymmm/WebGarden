@@ -13,8 +13,7 @@
         <div class="card-block">
           <h4 class="card-title">Wizualizacja</h4>
           <div
-            class="grid-item"
-            [class.grid-active]="selected == field"
+            [ngClass]="{ 'grid-active': selected == field, 'grid-item': true }"
             (click)="selected = field"
           >
             <label>{{ field.name }}</label>
@@ -24,13 +23,13 @@
             />
           </div>
           <div class="grid-item" (click)="selected = null">
-            <img class="grid-img" src="../../../assets/empty.png" />
+            <img class="grid-img" src="../../../assets/empty.jpg" />
           </div>
           <div class="grid-item">
-            <img class="grid-img" src="../../../assets/empty.png" />
+            <img class="grid-img" src="../../../assets/empty.jpg" />
           </div>
           <div class="grid-item">
-            <img class="grid-img" src="../../../assets/empty.png" />
+            <img class="grid-img" src="../../../assets/empty.jpg" />
           </div>
         </div>
       </div>

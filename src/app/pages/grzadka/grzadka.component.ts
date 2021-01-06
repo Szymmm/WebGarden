@@ -12,7 +12,7 @@ export class GrzadkaComponent implements OnInit {
 
   field = {
     name: "Pusta nazwa",
-    plant: "",
+    plant: "empty",
   };
 
   save(event) {
