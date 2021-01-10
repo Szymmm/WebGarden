@@ -1,0 +1,17 @@
+.grid-item {
+  background-color: rgba(224, 162, 90, 0.808);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-active {
+  background-color: red;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+.grid-img {
+  display: block;
+  width: 90%;
+}

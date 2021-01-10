@@ -8,29 +8,5 @@ import { Component, OnInit } from "@angular/core";
 export class GrzadkaComponent implements OnInit {
   ngOnInit(): void {}
 
-  selected = null;
-
-  fields = [
-    {
-      name: "Pusta nazwa",
-      plant: "empty",
-    },
-    {
-      name: "Moje ogórki",
-      plant: "truskawki",
-    },
-    {
-      name: "Rukolla",
-      plant: "rukola",
-    },
-    {
-      name: "Coś jeszcze",
-      plant: "jarmuż",
-    },
-  ];
-
-  save(event) {
-    console.log("Saved", event);
-  }
   constructor() {}
 }

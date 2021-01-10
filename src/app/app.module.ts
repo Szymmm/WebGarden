@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from "./pages/page-not-found/page-not-found.com
 import { CameraComponent } from "./pages/camera/camera.component";
 import { EditBarComponent } from "./components/edit-bar/edit-bar.component";
 import { FormsModule } from "@angular/forms";
+import { FieldsComponent } from './pages/grzadka/fields/fields.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from "@angular/forms";
     PageNotFoundComponent,
     CameraComponent,
     EditBarComponent,
+    FieldsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
