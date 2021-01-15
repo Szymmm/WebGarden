@@ -1,22 +1,21 @@
-<div class="row">
-  <div class="col-sm-8">
-    <div class="pb-3">
-      <h4 class="card-title">Wizualizacja</h4>
-    </div>
-    <div
-      *ngFor="let field of fields; let i = index"
-      [ngClass]="{
-        'grid-active': selected == field,
-        'grid-item': true
-      }"
-      (click)="selected = field"
-    >
-      <label>{{ i + 1 }}. {{ field.name }}</label>
-      <img class="grid-img" [src]="'../../../assets/' + field.plant + '.jpg'" />
-    </div>
+<div class="container">
+  <div class="header">
+    <h4 class="card-title">Wizualizacja</h4>
   </div>
 
-  <div class="col-sm-4">
+  <figure
+    [class]="'item item' + i + 1"
+    *ngFor="let field of fields; let i = index"
+    [ngClass]="{
+      'grid-active': selected == field,
+      'grid-item': true
+    }"
+    (click)="selected = field"
+  >
+    <img class="grid-img" [src]="'../../../assets/' + field.plant + '.jpg'" />
+  </figure>
+
+  <div class="sidebar">
     <div *ngIf="selected != null" class="card-block">
       <div class="form-group">
         <label>Name:</label>
