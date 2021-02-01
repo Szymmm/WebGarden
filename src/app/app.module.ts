@@ -13,6 +13,8 @@ import { FormsModule } from "@angular/forms";
 import { FieldsComponent } from "./pages/grzadka/fields/fields.component";
 import { OffertComponent } from "./pages/home/offert/offert.component";
 import { HowItWorksComponent } from "./pages/home/how-it-works/how-it-works.component";
+import { SubscribeComponent } from "./pages/home/subscribe/subscribe.component";
+import { ContactComponent } from "./pages/home/contact/contact.component";
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { HowItWorksComponent } from "./pages/home/how-it-works/how-it-works.comp
     FieldsComponent,
     OffertComponent,
     HowItWorksComponent,
+    SubscribeComponent,
+    ContactComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

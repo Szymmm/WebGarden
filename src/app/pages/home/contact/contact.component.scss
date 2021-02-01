@@ -1,0 +1,38 @@
+.ts-block {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  position: relative;
+}
+
+.ts-background-is-dark {
+  color: #fff;
+  background-color: #1f1f1f;
+}
+
+.ts-background-is-dark .form-control {
+  box-shadow: 0 0 0 0.125rem rgba(255, 255, 255, 0.2);
+}
+
+.ts-background-is-dark .form-control:focus {
+  box-shadow: 0 0 0 0.125rem rgba(255, 255, 255, 0.4);
+}
+
+.ts-background-is-dark .ts-btn-border-muted {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(auto-fit, 400px);
+
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  vertical-align: middle;
+
+  list-style: none;
+  grid-gap: 50px;
+  margin: 100px 0 100px 0;
+  padding: 0;
+}

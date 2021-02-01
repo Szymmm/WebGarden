@@ -20,14 +20,6 @@ html {
   min-height: 300px;
 }
 
-.full-bg-gradient {
-  background: -webkit-linear-gradient(
-    45deg,
-    rgba(234, 21, 129, 0.6),
-    rgba(10, 23, 187, 0.6) 100%
-  );
-}
-
 .full-bg {
   width: 100%;
   height: 100%;
@@ -60,4 +52,33 @@ html {
 .slideIn.right.animate {
   opacity: 1;
   transform: translate(0%, 0%);
+}
+
+.bg-mail-section {
+  background: url("assets/bg-girl-book.jpg");
+  width: 100vw;
+
+  background-attachment: fixed;
+
+  display: block;
+  background-size: cover;
+  background-position: 50%;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.full-bg-gradient {
+  background: url("assets/bg-girl-book.jpg");
+}
+
+.form-text {
+  color: #fff;
 }

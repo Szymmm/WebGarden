@@ -1,0 +1,97 @@
+<div class="container ts-background-is-dark">
+  <div class="item item1">
+    <h3>Skontaktuj się z nami.</h3>
+    <address>
+      <figure>
+        Zdalny Ogródek
+        <br />
+        <br />
+        oddział pomorski:
+        <br />
+        Słoneczna 11
+        <br />
+        83-250 Szczodrowo
+        <br />
+
+        <div class="font-weight-bold">Email:</div>
+        <a href="mailto:kociewskiprzysiolek@gmail.com"
+          >kociewskiprzysiolek@gmail.com</a
+        >
+      </figure>
+      <br />
+    </address>
+  </div>
+
+  <div class="item item2">
+    <h3>Formularz kontaktowy:</h3>
+    <form
+      method="post"
+      class="clearfix ts-form ts-form-email ts-inputs__transparent"
+    >
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="form-group">
+            <label for="form-contact-name">Twoje imię *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="form-contact-name"
+              name="name"
+              [(ngModel)]="contactForm.name"
+              required
+            />
+          </div>
+          <!--end form-group -->
+        </div>
+        <!--end col-md-6 col-sm-6 -->
+        <div class="col-md-6 col-sm-6">
+          <div class="form-group">
+            <label for="form-contact-email">Twój Email *</label>
+            <input
+              type="email"
+              class="form-control"
+              id="form-contact-email"
+              name="email"
+              [(ngModel)]="contactForm.email"
+              required
+            />
+          </div>
+          <!--end form-group -->
+        </div>
+        <!--end col-md-6 col-sm-6 -->
+      </div>
+      <!--end row -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="form-contact-message">Twoja wiadomość *</label>
+            <textarea
+              class="form-control"
+              id="form-contact-message"
+              rows="5"
+              name="message"
+              [(ngModel)]="contactForm.message"
+              required
+            ></textarea>
+          </div>
+          <!--end form-group -->
+        </div>
+        <!--end col-md-12 -->
+      </div>
+      <div class="form-group clearfix">
+        <button
+          type="submit"
+          class="btn btn-primary float-right"
+          (click)="sendMessage()"
+        >
+          Wyślij wiadomość
+        </button>
+      </div>
+      <div class="form-contact-status"></div>
+    </form>
+  </div>
+</div>
+
+<div class="text-center text-white pb-5" data-bg-color="#000">
+  <small>© 2020 Zdalny Ogródek, All Rights Reserved</small>
+</div>

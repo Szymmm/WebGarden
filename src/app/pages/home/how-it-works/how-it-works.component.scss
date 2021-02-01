@@ -1,12 +1,27 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1000px));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(auto-fit, 400px);
 
   justify-content: center;
   justify-items: center;
+  align-content: center;
+  vertical-align: middle;
+
   list-style: none;
   grid-gap: 50px;
-  margin: 0;
+  margin: 100px 0 100px 0;
   padding: 0;
+}
+
+.body {
+  justify-content: center;
+  justify-items: center;
+}
+.item {
+  justify-content: center;
+  align-content: center;
+  vertical-align: middle;
+  justify-self: center;
+  align-items: center;
 }
