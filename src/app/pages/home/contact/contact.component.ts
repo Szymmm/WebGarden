@@ -14,7 +14,6 @@ export class ContactComponent implements OnInit {
   };
 
   sendMessage() {
-    console.log(this.contactForm);
     axios.post(
       "https://b3f06hli2d.execute-api.eu-central-1.amazonaws.com/default/remoteGarden-lambda",
       {
