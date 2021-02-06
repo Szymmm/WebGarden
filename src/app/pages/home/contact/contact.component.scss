@@ -23,16 +23,5 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(auto-fit, 400px);
-
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  vertical-align: middle;
-
-  list-style: none;
-  grid-gap: 50px;
-  margin: 100px 0 100px 0;
-  padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(0, 600px));
 }

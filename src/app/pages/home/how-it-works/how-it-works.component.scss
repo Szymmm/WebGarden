@@ -5,6 +5,7 @@
 
   justify-content: center;
   justify-items: center;
+  justify-self: center;
   align-content: center;
   vertical-align: middle;
 
@@ -18,7 +19,26 @@
   justify-content: center;
   justify-items: center;
 }
+
 .item {
+  justify-content: center;
+  align-content: center;
+  vertical-align: middle;
+  justify-self: center;
+  align-items: center;
+}
+
+.item2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  vertical-align: middle;
+  justify-self: center;
+  align-items: center;
+}
+
+.item3 {
+  display: flex;
   justify-content: center;
   align-content: center;
   vertical-align: middle;
