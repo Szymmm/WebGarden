@@ -77,3 +77,62 @@ html {
 .form-text {
   color: #fff;
 }
+
+/*-------------------------------------------
+  -- Circle
+-------------------------------------------*/
+
+.ts-circle__sm {
+  border-radius: 50%;
+  display: inline-block;
+  height: 4.375rem;
+  flex: 0 0 4.375rem;
+  overflow: hidden;
+  text-align: center;
+  line-height: 4.375rem;
+  width: 4.375rem;
+}
+
+.ts-circle__md {
+  border-radius: 50%;
+  display: inline-block;
+  height: 6.25rem;
+  flex: 0 0 6.25rem;
+  overflow: hidden;
+  text-align: center;
+  line-height: 6.25rem;
+  width: 6.25rem;
+}
+
+.ts-circle__lg {
+  border-radius: 50%;
+  display: inline-block;
+  height: 8.125rem;
+  flex: 0 0 8.125rem;
+  overflow: hidden;
+  text-align: center;
+  line-height: 8.125rem;
+  width: 8.125rem;
+}
+
+.ts-circle__xl {
+  border-radius: 50%;
+  display: inline-block;
+  height: 10rem;
+  flex: 0 0 10rem;
+  overflow: hidden;
+  text-align: center;
+  line-height: 10rem;
+  width: 10rem;
+}
+
+.ts-circle__xxl {
+  border-radius: 50%;
+  display: inline-block;
+  height: 15.625rem;
+  flex: 0 0 15.625rem;
+  overflow: hidden;
+  text-align: center;
+  line-height: 15.625rem;
+  width: 15.625rem;
+}

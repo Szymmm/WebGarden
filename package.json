@@ -21,8 +21,11 @@
     "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta1",
     "jquery": "^3.5.1",
+    "ngx-owl-carousel": "^2.0.7",
+    "owl.carousel": "^2.3.4",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
+    "script-loader": "^0.7.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
