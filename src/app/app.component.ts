@@ -12,8 +12,18 @@ import { Component } from "@angular/core";
     <div class="flex-grow-1">
       <router-outlet></router-outlet>
     </div>
+
+    <div class="text-center text-black pb-5" data-bg-color="#FFF">
+      <small>© 2021 Zdalny Ogródek, All Rights Reserved</small>
+    </div>
   `,
-  styles: [],
+  styles: [
+    `
+      .pb-5 {
+        margin: 50px 0 0 0;
+      }
+    `,
+  ],
 })
 export class AppComponent {
   title = "WebGarden";
