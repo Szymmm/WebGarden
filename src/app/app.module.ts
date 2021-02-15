@@ -17,6 +17,7 @@ import { SubscribeComponent } from "./pages/home/subscribe/subscribe.component";
 import { ContactComponent } from "./pages/home/contact/contact.component";
 import { ArticlesComponent } from "./pages/articles/articles.component";
 import { OwlModule } from "ngx-owl-carousel";
+import { PricesComponent } from './pages/prices/prices.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { OwlModule } from "ngx-owl-carousel";
     SubscribeComponent,
     ContactComponent,
     ArticlesComponent,
+    PricesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, OwlModule],
   providers: [],
