@@ -1,0 +1,50 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(auto-fit);
+
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  align-content: center;
+  vertical-align: middle;
+
+  list-style: none;
+  grid-gap: 50px;
+  padding: 0;
+}
+
+.body {
+  justify-content: center;
+  justify-items: center;
+}
+
+.item {
+  justify-content: center;
+  align-content: center;
+  vertical-align: middle;
+  justify-self: center;
+  align-items: center;
+}
+
+.item1 {
+  margin: 100px 0px 0px;
+}
+
+.item2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  vertical-align: middle;
+  justify-self: center;
+  align-items: center;
+}
+
+.item3 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  vertical-align: middle;
+  justify-self: center;
+  align-items: center;
+}
