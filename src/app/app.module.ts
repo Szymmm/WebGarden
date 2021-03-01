@@ -8,7 +8,6 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { GrzadkaComponent } from "./pages/grzadka/grzadka.component";
 import { PageNotFoundComponent } from "./pages/page-not-found/page-not-found.component";
 import { CameraComponent } from "./pages/camera/camera.component";
-import { EditBarComponent } from "./components/edit-bar/edit-bar.component";
 import { FormsModule } from "@angular/forms";
 import { FieldsComponent } from "./pages/grzadka/fields/fields.component";
 import { OffertComponent } from "./pages/home/offert/offert.component";
@@ -17,7 +16,14 @@ import { SubscribeComponent } from "./pages/home/subscribe/subscribe.component";
 import { ContactComponent } from "./pages/home/contact/contact.component";
 import { ArticlesComponent } from "./pages/articles/articles.component";
 import { OwlModule } from "ngx-owl-carousel";
-import { PricesComponent } from './pages/prices/prices.component';
+import { PricesComponent } from "./pages/prices/prices.component";
+import { AlertComponent } from "./components/alert.component";
+import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { JwtInterceptor } from "src/app/helpers/jwt.interceptor";
+import { ErrorInterceptor } from "src/app/helpers/error.interceptor";
+
+import { fakeBackendProvider } from "src/app/helpers/fake-backend";
 
 @NgModule({
   declarations: [
@@ -27,7 +33,6 @@ import { PricesComponent } from './pages/prices/prices.component';
     GrzadkaComponent,
     PageNotFoundComponent,
     CameraComponent,
-    EditBarComponent,
     FieldsComponent,
     OffertComponent,
     HowItWorksComponent,
@@ -35,9 +40,21 @@ import { PricesComponent } from './pages/prices/prices.component';
     ContactComponent,
     ArticlesComponent,
     PricesComponent,
+    AlertComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, OwlModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    OwlModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    fakeBackendProvider,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

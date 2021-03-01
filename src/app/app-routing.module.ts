@@ -7,6 +7,13 @@ import { CameraComponent } from "./pages/camera/camera.component";
 import { ArticlesComponent } from "./pages/articles/articles.component";
 import { PricesComponent } from "./pages/prices/prices.component";
 import { FarmsComponent } from "./pages/farms/farms.component";
+import { AuthGuard } from "src/app/helpers";
+import { LoginComponent } from "./account/login.component";
+
+const accountModule = () =>
+  import("./account/account.module").then((x) => x.AccountModule);
+const usersModule = () =>
+  import("./users/users.module").then((x) => x.UsersModule);
 
 const routes: Routes = [
   {
@@ -17,7 +24,9 @@ const routes: Routes = [
   {
     path: "home",
     component: HomeComponent,
+    canActivate: [AuthGuard],
   },
+  { path: "login", component: LoginComponent },
   {
     path: "grzadka",
     component: GrzadkaComponent,
@@ -38,6 +47,8 @@ const routes: Routes = [
     path: "articles",
     component: ArticlesComponent,
   },
+  { path: "users", loadChildren: usersModule, canActivate: [AuthGuard] },
+  { path: "account", loadChildren: accountModule },
   {
     path: "page-not-found",
     component: PageNotFoundComponent,

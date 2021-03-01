@@ -1,14 +1,33 @@
 import { Component } from "@angular/core";
+import { AccountService } from "src/app/services/account.service";
+import { User } from "src/app/models/user";
 
 @Component({
   selector: "app-root",
   template: `
-    <app-navbar></app-navbar>
-    <div style="text-align:center" class="content">
-      <img width="300" alt="Zdalny Ogrodek Logo" src="/assets/logo.png" />
-    </div>
+    <!-- nav -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+      <div class="navbar-nav">
+        <a
+          class="nav-item nav-link"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+        <a
+          class="nav-item nav-link"
+          routerLink="/users"
+          routerLinkActive="active"
+          >Users</a
+        >
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+      </div>
+    </nav>
 
-    <div class="flex-grow-1">
+    <!-- main app container -->
+    <div class="app-container" [ngClass]="{ 'bg-light': user }">
+      <alert></alert>
       <router-outlet></router-outlet>
     </div>
 
@@ -26,4 +45,13 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "WebGarden";
+  user: User;
+
+  constructor(private accountService: AccountService) {
+    this.accountService.user.subscribe((x) => (this.user = x));
+  }
+
+  logout() {
+    this.accountService.logout();
+  }
 }

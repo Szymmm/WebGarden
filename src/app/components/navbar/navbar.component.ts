@@ -1,13 +1,17 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
+import { User } from "src/app/models";
+import { AccountService } from "src/app/services";
 
 @Component({
   selector: "app-navbar",
   templateUrl: "./navbar.component.html",
   styleUrls: ["./navbar.component.scss"],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   open = false;
-  constructor() {}
+  user: User;
 
-  ngOnInit(): void {}
+  constructor(private accountService: AccountService) {
+    this.user = this.accountService.userValue;
+  }
 }
