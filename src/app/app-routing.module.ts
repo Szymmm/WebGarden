@@ -9,6 +9,8 @@ import { PricesComponent } from "./pages/prices/prices.component";
 import { FarmsComponent } from "./pages/farms/farms.component";
 import { AuthGuard } from "src/app/helpers";
 import { LoginComponent } from "./account/login.component";
+import { RegisterComponent } from "./account/register.component";
+import { LayoutComponent } from "./account/layout.component";
 
 const accountModule = () =>
   import("./account/account.module").then((x) => x.AccountModule);
@@ -24,9 +26,11 @@ const routes: Routes = [
   {
     path: "home",
     component: HomeComponent,
-    canActivate: [AuthGuard],
   },
-  { path: "login", component: LoginComponent },
+
+  { path: "account/login", component: LoginComponent },
+  { path: "account/register", component: RegisterComponent },
+
   {
     path: "grzadka",
     component: GrzadkaComponent,
@@ -34,6 +38,7 @@ const routes: Routes = [
   {
     path: "camera",
     component: CameraComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: "prices",
@@ -47,8 +52,6 @@ const routes: Routes = [
     path: "articles",
     component: ArticlesComponent,
   },
-  { path: "users", loadChildren: usersModule, canActivate: [AuthGuard] },
-  { path: "account", loadChildren: accountModule },
   {
     path: "page-not-found",
     component: PageNotFoundComponent,

@@ -13,5 +13,10 @@ export class NavbarComponent {
 
   constructor(private accountService: AccountService) {
     this.user = this.accountService.userValue;
+    this.accountService.user.subscribe((x) => (this.user = x));
+  }
+
+  logout() {
+    this.accountService.logout();
   }
 }

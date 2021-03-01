@@ -29,12 +29,21 @@
           <a class="nav-link" routerLink="/articles">Piszą o nas</a>
         </li>
       </ul>
-    </div>
-    <div class="p-4">
-      <div class="container">
-        <h1>Hi {{ user.firstName }}!</h1>
-        <p><a routerLink="/users">Manage Users</a></p>
-      </div>
+      <ul class="navbar-nav navbar-right mb-2 mb-lg-0">
+        <li>
+          <a class="nav-item nav-link" *ngIf="user"
+            >Witaj {{ user.firstName }}</a
+          >
+        </li>
+        <li>
+          <a class="nav-item nav-link" (click)="logout()" *ngIf="user"
+            >Logout</a
+          >
+          <a class="nav-item nav-link" (click)="logout()" *ngIf="user == null"
+            >Login</a
+          >
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

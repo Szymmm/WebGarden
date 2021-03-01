@@ -6,24 +6,10 @@ import { User } from "src/app/models/user";
   selector: "app-root",
   template: `
     <!-- nav -->
-    <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
-      <div class="navbar-nav">
-        <a
-          class="nav-item nav-link"
-          routerLink="/"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >Home</a
-        >
-        <a
-          class="nav-item nav-link"
-          routerLink="/users"
-          routerLinkActive="active"
-          >Users</a
-        >
-        <a class="nav-item nav-link" (click)="logout()">Logout</a>
-      </div>
-    </nav>
+    <app-navbar></app-navbar>
+    <div style="text-align:center" class="content">
+      <img width="300" alt="Zdalny Ogrodek Logo" src="/assets/logo.png" />
+    </div>
 
     <!-- main app container -->
     <div class="app-container" [ngClass]="{ 'bg-light': user }">
