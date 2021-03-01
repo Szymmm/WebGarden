@@ -9,9 +9,7 @@ import { Component } from "@angular/core";
       <img width="300" alt="Zdalny Ogrodek Logo" src="/assets/logo.png" />
     </div>
 
-    <!-- main app container -->
-    <div class="app-container" [ngClass]="{ 'bg-light': user }">
-      <alert></alert>
+    <div class="flex-grow-1">
       <router-outlet></router-outlet>
     </div>
 
