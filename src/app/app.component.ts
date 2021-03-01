@@ -1,6 +1,4 @@
 import { Component } from "@angular/core";
-import { AccountService } from "src/app/services/account.service";
-import { User } from "src/app/models/user";
 
 @Component({
   selector: "app-root",
@@ -31,13 +29,4 @@ import { User } from "src/app/models/user";
 })
 export class AppComponent {
   title = "WebGarden";
-  user: User;
-
-  constructor(private accountService: AccountService) {
-    this.accountService.user.subscribe((x) => (this.user = x));
-  }
-
-  logout() {
-    this.accountService.logout();
-  }
 }
