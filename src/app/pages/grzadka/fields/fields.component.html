@@ -23,16 +23,15 @@
       </div>
       <div class="form-group">
         <label for="disabledSelect" class="form-label">Rodzaj uprawy</label>
+
         <select
           id="disabledSelect"
           class="form-select"
           [(ngModel)]="selected.plant"
         >
-          <option>empty</option>
-          <option>jarmuż</option>
-          <option>rukola</option>
-          <option>sałata</option>
-          <option>truskawki</option>
+          <option *ngFor="let plant of fieldPlants; let i = index">
+            {{ plant.name }}
+          </option>
         </select>
       </div>
       <div>
