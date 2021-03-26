@@ -23,8 +23,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { JwtInterceptor } from "src/app/helpers/jwt.interceptor";
 import { ErrorInterceptor } from "src/app/helpers/error.interceptor";
 
-import { fakeBackendProvider } from "src/app/helpers/fake-backend";
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +51,6 @@ import { fakeBackendProvider } from "src/app/helpers/fake-backend";
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    fakeBackendProvider,
   ],
   bootstrap: [AppComponent],
 })

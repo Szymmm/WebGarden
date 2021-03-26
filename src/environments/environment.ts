@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://localhost:4200",
+  apiUrl: "http://gaden-env.eba-sfbxh5bf.eu-central-1.elasticbeanstalk.com",
 };
 
 /*
