@@ -10,12 +10,9 @@ import { FarmsComponent } from "./pages/farms/farms.component";
 import { AuthGuard } from "src/app/helpers";
 import { LoginComponent } from "./account/login.component";
 import { RegisterComponent } from "./account/register.component";
-import { LayoutComponent } from "./account/layout.component";
 
 const accountModule = () =>
   import("./account/account.module").then((x) => x.AccountModule);
-const usersModule = () =>
-  import("./users/users.module").then((x) => x.UsersModule);
 
 const routes: Routes = [
   {
