@@ -28,6 +28,36 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/articles">Piszą o nas</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/shopping-cart">Koszyk</a>
+        </li>
+        <li ngbDropdown class="nav-item dropdown">
+          <a
+            ngbDropdownToggle
+            class="nav-link dropdown-toggle"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Użytkownik
+          </a>
+          <div
+            ngbDropdownMenu
+            class="dropdown-menu"
+            aria-labelledby="navbarDropdown"
+          >
+            <a class="dropdown-item" routerLink="/my/orders">Moje zamówienia</a>
+            <a class="dropdown-item" routerLink="/admin/orders"
+              >Zarządzaj produktami</a
+            >
+            <a class="dropdown-item" routerLink="/admin/products"
+              >Zarządzaj zamówieniami</a
+            >
+            <a class="dropdown-item">Wyloguj</a>
+          </div>
+        </li>
       </ul>
       <ul class="navbar-nav navbar-right mb-2 mb-lg-0">
         <li>

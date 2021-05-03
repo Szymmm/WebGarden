@@ -22,6 +22,16 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { JwtInterceptor } from "src/app/helpers/jwt.interceptor";
 import { ErrorInterceptor } from "src/app/helpers/error.interceptor";
+import { ProductsComponent } from "./pages/products/products.component";
+import { ShoppingCartComponent } from "./pages/shopping-cart/shopping-cart.component";
+import { CheckOutComponent } from "./pages/check-out/check-out.component";
+import { OrderSuccessComponent } from "./pages/order-success/order-success.component";
+import { MyOrdersComponent } from "./pages/my-orders/my-orders.component";
+import { AdminProductsComponent } from "./pages/admin/admin-products/admin-products.component";
+import { AdminOrdersComponent } from "./pages/admin/admin-orders/admin-orders.component";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { AuthGuard } from "./services/auth-guard.service";
+import { AccountService } from "./services/account.service";
 
 @NgModule({
   declarations: [
@@ -39,6 +49,13 @@ import { ErrorInterceptor } from "src/app/helpers/error.interceptor";
     ArticlesComponent,
     PricesComponent,
     AlertComponent,
+    ProductsComponent,
+    ShoppingCartComponent,
+    CheckOutComponent,
+    OrderSuccessComponent,
+    MyOrdersComponent,
+    AdminProductsComponent,
+    AdminOrdersComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,10 +64,13 @@ import { ErrorInterceptor } from "src/app/helpers/error.interceptor";
     OwlModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    AuthGuard,
+    AccountService,
   ],
   bootstrap: [AppComponent],
 })

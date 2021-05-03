@@ -11,7 +11,7 @@ export class NavbarComponent {
   open = false;
   user: User;
 
-  constructor(private accountService: AccountService) {
+  constructor(public accountService: AccountService) {
     this.user = this.accountService.userValue;
     this.accountService.user.subscribe((x) => (this.user = x));
   }
