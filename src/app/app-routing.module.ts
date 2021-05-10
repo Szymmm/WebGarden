@@ -17,6 +17,7 @@ import { OrderSuccessComponent } from "./pages/order-success/order-success.compo
 import { AdminProductsComponent } from "./pages/admin/admin-products/admin-products.component";
 import { AdminOrdersComponent } from "./pages/admin/admin-orders/admin-orders.component";
 import { MyOrdersComponent } from "./pages/my-orders/my-orders.component";
+import { ProductFormComponent } from "./pages/admin/product-form/product-form.component";
 
 const accountModule = () =>
   import("./account/account.module").then((x) => x.AccountModule);
@@ -87,6 +88,11 @@ const routes: Routes = [
   {
     path: "admin/products",
     component: AdminProductsComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "admin/products/new",
+    component: ProductFormComponent,
     canActivate: [AuthGuard],
   },
   {

@@ -32,6 +32,7 @@ import { AdminOrdersComponent } from "./pages/admin/admin-orders/admin-orders.co
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AuthGuard } from "./services/auth-guard.service";
 import { AccountService } from "./services/account.service";
+import { ProductFormComponent } from './pages/admin/product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { AccountService } from "./services/account.service";
     MyOrdersComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
+    ProductFormComponent,
   ],
   imports: [
     BrowserModule,
